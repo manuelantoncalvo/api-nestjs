@@ -57,7 +57,11 @@ export class UserService {
   }
 
   async getByUsername(username: string): Promise<User> {
-    return this.userRepository.findOne({ where: { username } });
+    const result = await this.userRepository.query(
+      'SELECT * FROM user WHERE user.username = ?',
+      [username],
+    );
+    return <User>result[0];
   }
 
   async seedDatabase() {

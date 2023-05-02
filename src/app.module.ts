@@ -27,7 +27,7 @@ import { CityService } from './region/city.service';
       database: 'api_nestjs',
       entities: [User, Profile, Address, City, Country],
       synchronize: true,
-      logging: true,
+      //logging: true,
     }),
     TypeOrmModule.forFeature([User, Profile, Address, City, Country]),
     JwtModule.register({
