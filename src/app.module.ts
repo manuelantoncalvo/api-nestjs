@@ -20,7 +20,7 @@ import { CityService } from './region/city.service';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: 'localhost',
+      host: 'mysql_db',
       port: 3306,
       username: 'root',
       password: 'root',
